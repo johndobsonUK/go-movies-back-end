@@ -7,7 +7,6 @@ import (
 	_ "github.com/jackc/pgconn"
 	_ "github.com/jackc/pgx/v4"
 	_ "github.com/jackc/pgx/v4/stdlib"
-	// "golang.org/x/tools/go/analysis/passes/nilfunc"
 )
 
 func openDB(dsn string) (*sql.DB, error) {

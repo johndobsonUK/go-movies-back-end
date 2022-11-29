@@ -7,7 +7,6 @@ require (
 	github.com/go-chi/chi/v5 v5.0.7
 	github.com/jackc/pgconn v1.13.0
 	github.com/jackc/pgx/v4 v4.17.2
-	golang.org/x/tools v0.0.0-20200103221440-774c71fcf114
 )
 
 require (
