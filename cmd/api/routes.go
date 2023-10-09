@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/go-chi/chi/middleware"
@@ -8,6 +9,9 @@ import (
 )
 
 func (app *application) routes() http.Handler {
+	
+	log.Println("Loading Routes")
+
 	mux := chi.NewRouter()
 
 	mux.Use(middleware.Recoverer)
@@ -15,7 +19,7 @@ func (app *application) routes() http.Handler {
 
 	mux.Get("/", app.Home)
 
-	mux.Get("/authenticate", app.authenticate)
+	mux.Post("/authenticate", app.authenticate)
 
 	mux.Get("/movies", app.AllMovies)
 
